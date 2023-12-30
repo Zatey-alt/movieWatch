@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: auto;
+  overflow-x: none;
 
 }
 
@@ -72,7 +72,7 @@ input::placeholder{
 /* Media queries for tablet and mobile responsiveness */
 @media screen and (max-width: 768px) {
   .app input {
-    width: 250px;
+    width: 100%;
   }
   .hero{
     display: flex;
@@ -85,16 +85,17 @@ input::placeholder{
     width: 100%;
   }
   .app .container{
-    width: 300px;
-    height: 400px;
-    padding: 0 10em;
+    width: 100%; /* Adjust container width for better responsiveness */
+    padding: 0; /* Remove unnecessary padding */
     margin-top: 20px;
   }
   .plot{
-    padding: 0;
+    font-size: 16px;
   }
 
 }
+
+
 /* Add this to your CSS */
 img:hover {
   transform: scale(1.2); /* Adjust the scaling factor as needed */
