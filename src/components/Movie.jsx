@@ -10,10 +10,10 @@ const MovieSearch = () => {
 
   const searchMovies = async () => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`);
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`);
       if (response.data.Response === 'True') {
         const movieDetailsPromises = response.data.Search.map(async (movie) => {
-          const detailsResponse = await axios.get(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${movie.imdbID}`);
+          const detailsResponse = await axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${movie.imdbID}`);
           return detailsResponse.data;
         });
 
