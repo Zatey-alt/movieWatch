@@ -85,7 +85,7 @@ input::placeholder{
     width: 100%;
   }
   .app .container{
-    width: 100%; /* Adjust container width for better responsiveness */
+    width: 80%; /* Adjust container width for better responsiveness */
     padding: 0; /* Remove unnecessary padding */
     margin-top: 20px;
   }
