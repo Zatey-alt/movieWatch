@@ -1,0 +1,156 @@
+body {
+  background: #151534;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #f2f2f2;
+  margin: 0; /* Remove default body margin */
+}
+
+
+
+
+.movie-search-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  width: 100%; /* Use 100% width for better responsiveness */
+  border-radius: 28px;
+  height: 40px; /* Increase height for better visibility on smaller screens */
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #676790;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #f2f2f2;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.movie-list li {
+  text-align: center;
+  list-style: none;
+}
+
+
+
+/* Media queries for tablet and mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .app input {
+    width: 250px;
+  }
+
+  .app{
+    width: 100%;
+  }
+  .app .container{
+    width: 300px;
+    height: 400px;
+    padding: 0 10em;
+    margin-top: 20px;
+  }
+  .plot{
+    padding: 0;
+  }
+
+}
+/* Add this to your CSS */
+img:hover {
+  transform: scale(1.2); /* Adjust the scaling factor as needed */
+  transition: transform 0.3s ease; /* Add a smooth transition for the scaling effect */
+}
+
+
+
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  gap: 10px;
+
+  > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("assets/1.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("assets/2.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("assets/3.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(4) {
+      background: url("assets/4.jpg")
+        no-repeat 50% / cover;
+    }
+
+    .content {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(2, 2, 46);
+      background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.6755077030812324) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 250px;
+      box-shadow: 1px 3px 15px #7645d8;
+      transform: translatey(-30px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
+}
