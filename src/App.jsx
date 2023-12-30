@@ -6,6 +6,7 @@ import MovieSearch from './components/Movie'
 
 import Hero from './components/Hero'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,6 +22,7 @@ function App() {
     
 
       <MovieSearch/>
+   
     </div>
   )
 }

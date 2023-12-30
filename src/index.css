@@ -33,7 +33,9 @@ input {
   font-family: 'Open Sans', sans-serif;
   color: #f2f2f2;
 }
-
+input::placeholder{
+  color: #f2f2f2;
+}
 .movie-list {
   list-style: none;
   padding: 0;
@@ -153,4 +155,13 @@ img:hover {
       visibility: visible;
     }
   }
+}
+.footer{
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #bfbfbf;
 }
