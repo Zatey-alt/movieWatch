@@ -92,6 +92,9 @@ input::placeholder{
   .plot{
     font-size: 16px;
   }
+  .container > div {
+    flex: 0 0 100%; /* Adjust the width of the container items */
+  }
 
 }
 
