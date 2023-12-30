@@ -143,6 +143,29 @@ img:hover {
     }
 
     .content {
+      @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+    
+        > div {
+          flex: 0 0 auto;
+    
+          .content {
+            height: auto;
+            justify-content: center;
+            text-align: center;
+          }
+    
+          &:hover {
+            flex: 0 0 auto;
+            transform: translatey(0);
+          }
+    
+          &:hover .content {
+            transform: translatey(0%);
+          }
+        }
+      }
       font-size: 1.5rem;
       color: #fff;
       display: flex;
@@ -181,13 +204,4 @@ img:hover {
       visibility: visible;
     }
   }
-}
-.footer{
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: #bfbfbf;
 }
